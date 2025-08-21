@@ -25,12 +25,6 @@ if(NOT LibArchive_FOUND)
     message(WARNING "${ColorRed}libarchive not found, multiarc will have weaker archives support. Its recommended to install libarchive-dev and reconfigure far2l.${ColorNormal}")
 endif()
 
-find_package(PCRE)
-if(NOT PCRE_FOUND)
-    message(WARNING "${ColorRed}libpcre not found, multiarc will have no custom archives support. Install libpcre and reconfigure far2l if you need that functionality.${ColorNormal}")
-endif()
-
-
 set(SOURCES
     src/MultiArc.cpp
     src/ArcPlg.cpp
